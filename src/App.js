@@ -1,12 +1,27 @@
 import React from 'react';
 import './App.css';
+import Navbar from './components/layout/Navbar'
+import Hero from './components/Hero'
+import About from './components/About'
+import Explore from './components/Explore'
+import Advance from './components/Advance'
+import Zapareblue from './components/Zapareblue'
+import Enquiry from './components/Enquiry'
+import Footer from './components/Footer'
 
 const App = () => {
   
-
-  
   return (
-
+     <div id="wrapper">
+      <Navbar />
+      <Hero />
+      <About />
+      <Explore />
+      <Advance />
+      <Zapareblue />
+      <Enquiry />
+      <Footer />
+      </div>
   );
 }
 
