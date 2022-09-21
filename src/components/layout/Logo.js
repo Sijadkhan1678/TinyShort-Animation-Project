@@ -1,10 +1,13 @@
-import React,{Fragment} from 'react'
+import React from 'react'
 
 const Logo = () => {
+  
  return(  
  
-   <div className="dummy-svg" style={{height: '35px',overflow: 'hidden'}}>
-  <svg xmlns="http://www.w3.org/2000/svg" id="z_logo" viewBox="0 0 64.312 40.348">
+   <div  className="dummy-svg" style={{height: '35px',overflow: 'hidden',
+     backgroundColor:'red'
+   }}>
+  <svg  xmlns="http://www.w3.org/2000/svg" id="z_logo" viewBox="0 0 64.312 40.348">
       <g id="Group_3" data-name="Group 3" transform="translate(-90.29 -40.162)">
         <g data-name="Group 2">
           <path data-name="Path 1" d="M204.213,115.77l-13.348-13.348,3.354-3.356L190.971,95.8l-6.619,6.621,19.861,19.861,10.314-10.332-3.247-3.249-7.067,7.067" transform="translate(-83.604 -41.774)" fill="#fdb811" fill-rule="evenodd"></path>

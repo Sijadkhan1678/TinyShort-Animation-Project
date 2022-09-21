@@ -1,11 +1,30 @@
-import React from 'react';
+import React,{useRef,useEffect} from 'react';
 import Logo from './Logo'
 
 const Navbar = () => {
-  
+  {/*const logo = useRef('')
+  useEffect(()=>{
+    logo.current.animate([
+    {
+      transform: 'translateX(0)',
+      color: 'black'
+    },
+    {
+      transform: 'translateX(0)',
+      transform: 'translateX(100px)',
+      color: 'red'
+    },{
+      transform: 'translateX(0px)'
+    }],
+    {
+    duration:6000,
+    iterations:Infinity
+    })
+  })
+  */}
   return (
      <div>
-       <Logo />
+       <Logo  />
  
     <header
       data-spy="affix"

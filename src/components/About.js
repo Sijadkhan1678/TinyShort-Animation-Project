@@ -1,7 +1,22 @@
-import React from 'react';
+import React,{useEffect,useRef} from 'react';
 import about from './images/about-img.png'
 const About = () => {
   
+  const aboutImg = useRef('');
+  const aboutText = useRef('');
+  //for img scrollY 328
+  // for Text scrollY 460
+  useEffect( () => {
+  document.addEventListener('scroll',()=>{
+    if(window.scrollY === 328)
+    {
+      
+    }
+    else if(window.scrollY === 460){
+      console.log('scroll 460',window.scrollY)
+    }
+  })
+  },[window.scrollY>460])
    return (
     <section className="abtSection" id="abtSection">
         <span

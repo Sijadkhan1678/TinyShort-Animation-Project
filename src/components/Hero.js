@@ -1,8 +1,51 @@
-import React from 'react'
+import React,{useRef,useEffect} from 'react'
 
 const Hero = () => {
-     return (
-<div className="headDiv">
+  console.log(window.scrollY)
+  const banner = useRef('')
+  const text1  = useRef('')
+  const text2  = useRef('')
+  const text3  = useRef('')
+  const button = useRef('')
+  useEffect(()=>{
+    banner.current.animate([{
+        visibility:'hidden',
+        transform: 'translateX(500px)'},
+   {
+     transform: 'translateY(-50px)'
+    },
+    {
+      transform:'translateY(0)',
+      transform: 'translateX(0)' ,
+      
+    }
+    ],
+    {
+    duration:2500
+    })
+    const textFrames = [{
+        
+        transform: 'translateX(-300px)'
+      },{
+        transform: 'translateX(0)'
+      }
+      ]
+  const text1Anim=  text1.current.animate(textFrames,{
+      duration: 1500,
+    })
+    text2.current.animate(textFrames,{
+      duration:1900,
+    })
+    text3.current.animate(textFrames, {
+      duration:2200
+    } )
+    button.current.animate(textFrames,{
+      duration:2500
+    })
+  })
+  
+   return (
+    <div className="headDiv">
       {" "}
       <section className="bannerSec">
         <div className="container">
@@ -18,6 +61,7 @@ const Hero = () => {
                   style={{ width: "100%", height: "100%" }}
                 >
                   <svg
+                  ref={banner}
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 890 740"
                     width={890}
@@ -6953,7 +6997,7 @@ const Hero = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="owl-item" style={{ width: 555 }}>
+                    <div className="owl-item cloned" style={{ width: 555 }}>
                       <div className="item">
                         <div className="sld">
                           <h2>
@@ -6978,21 +7022,24 @@ const Hero = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="owl-item active" style={{ width: 555 }}>
+                    <div  className="owl-item active" style={{ width: 555 }}>
                       <div className="item">
                         <div className="sld">
                           <h2>
-                            <div className="h2text">
+                            <div ref={text1}     className="h2text">
                               <span>Scalable extended</span>
                             </div>
-                            <div className="h2text">
+                            <div
+                      ref={text2}     className="h2text">
                               <span>business office</span>
                             </div>
-                            <div className="h2text">
+                            <div
+                      ref={text3} 
+                      className="h2text">
                               <span>services</span>
                             </div>
                           </h2>
-                          <div className="a">
+                          <div ref={button}      className="a">
                             <a
                               href="https://zaparetech.com/services"
                               className="pg_btn"
@@ -7003,7 +7050,7 @@ const Hero = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="owl-item" style={{ width: 555 }}>
+                    <div className="owl-item cloned" style={{ width: 555 }}>
                       <div className="item">
                         <div className="sld">
                           <h2>
@@ -7053,7 +7100,7 @@ const Hero = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="owl-item cloned" style={{ width: 555 }}>
+                    <div className="owl-item" style={{ width: 555 }}>
                       <div className="item">
                         <div className="sld">
                           <h2>
@@ -7133,6 +7180,9 @@ const Hero = () => {
       </section>
        </div>
        )
+}
+const textStyle = {
+  visibility: 'hidden'
 }
 
 export default Hero;
