@@ -2,6 +2,7 @@ import React from 'react';
 
 
 const Explore = () => {
+  
    return (
   <section className="explorSec">
         <span
