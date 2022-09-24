@@ -45,7 +45,7 @@ const Footer = () => {
               <a
                 aria-label="facebook"
                 target="_blank"
-                rel="noopener"
+                rel="noreferrer"
                 href="https://www.facebook.com/ZapareTechnologies"
               >
                 <span className="icon-fb" />
@@ -53,7 +53,7 @@ const Footer = () => {
               <a
                 aria-label="linkedin"
                 target="_blank"
-                rel="noopener"
+                rel="noreferrer"
                 href="https://www.linkedin.com/company/zapare/"
               >
                 <span className="icon-linkedin" />
@@ -70,15 +70,14 @@ const Footer = () => {
               href="https://webandcrafts.com/"
               aria-label="webandcrafts"
               target="_blank"
-              rel="noopener"
+              rel="noreferrer"
             >
               &nbsp; Webandcrafts.com
             </a>{" "}
           </p>
         </div>
       </footer>
-    
-      /*  <i className="overlay" /> */
+
       )
 }
 export default Footer

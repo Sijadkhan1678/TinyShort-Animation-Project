@@ -14,17 +14,11 @@ const button = useRef('')
     document.addEventListener('scroll',contactTextAnimation)
   
   })
- const imgFrame =  [{
-        visibility:'hidden',
-        transform: 'translateX(400px)'},
-   {
-     transform: 'translateY(-50px)'
-    },
-    {
-      transform:'translateY(0)',
-      transform: 'translateX(0)' ,
-      
-    }
+ const imgFrame =  [
+   { visibility:'hidden',
+    transform:'translateX(400px)'},
+   { transform: 'translateY(-50px)'},
+   {transform:'translate(0,0)' }
     ]
 const textFrames = [
       {opacity: 0},

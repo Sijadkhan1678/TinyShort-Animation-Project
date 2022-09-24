@@ -76,7 +76,7 @@ const textAnimation=  () =>{
         <span className="lterZ">
           <img
             src={ztext}
-            alt="z text image"
+            alt="z text"
           />
         </span>
       </section>

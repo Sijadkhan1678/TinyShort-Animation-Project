@@ -15,8 +15,8 @@ const Hero = () => {
      transform: 'translateY(-50px)'
     },
     {
-      transform:'translateY(0)',
-      transform: 'translateX(0)' ,
+      transform:'translate(0,0)'
+      
       
     }
     ],
@@ -30,7 +30,7 @@ const Hero = () => {
         transform: 'translateX(0)'
       }
       ]
-  const text1Anim=  text1.current.animate(textFrames,{
+     text1.current.animate(textFrames,{
       duration: 1500,
     })
     text2.current.animate(textFrames,{
@@ -7181,8 +7181,6 @@ const Hero = () => {
        </div>
        )
 }
-const textStyle = {
-  visibility: 'hidden'
-}
+
 
 export default Hero;

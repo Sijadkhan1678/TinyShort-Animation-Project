@@ -1,27 +1,8 @@
-import React,{useRef,useEffect} from 'react';
+import React from 'react';
 import Logo from './Logo'
 
 const Navbar = () => {
-  {/*const logo = useRef('')
-  useEffect(()=>{
-    logo.current.animate([
-    {
-      transform: 'translateX(0)',
-      color: 'black'
-    },
-    {
-      transform: 'translateX(0)',
-      transform: 'translateX(100px)',
-      color: 'red'
-    },{
-      transform: 'translateX(0px)'
-    }],
-    {
-    duration:6000,
-    iterations:Infinity
-    })
-  })
-  */}
+  
   return (
      <div>
        <Logo  />
@@ -67,8 +48,8 @@ const Navbar = () => {
                 Follow us :
               </p>
               <p>
-                <a aria-label="facebook" target="_blank" rel="noopener" href="https://www.facebook.com/ZapareTechnologies"><span className="icon-fb"></span></a>
-                <a aria-label="linkedin" target="_blank" rel="noopener" href="https://www.linkedin.com/company/zapare/"><span className="icon-linkedin"></span></a>
+                <a aria-label="facebook" target="_blank" rel="noreferrer" href="https://www.facebook.com/ZapareTechnologies"><span className="icon-fb"></span></a>
+                <a aria-label="linkedin" target="_blank" rel="noreferrer" href="https://www.linkedin.com/company/zapare/"><span className="icon-linkedin"></span></a>
                 {/* <a href="#"><span className="icon-y-tub"></span></a> */}
               </p>
             </div>

@@ -48,7 +48,7 @@ const textAnimation=  () =>{
           <img
             className="advg-overlay"
             src={overlay}
-            alt="adventage image"
+            alt="adventage"
           />
         </span>
         <div className="container">

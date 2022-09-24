@@ -65,11 +65,11 @@ const textAnimation=  () =>{
           style={{ transform: "translate3d(0px, 0px, 0px)", opacity: 1 }}
         >
           <img
-            style={{visibility: isVisible == true ? 'visible' :'hidden'}}
+            style={{visibility: isVisible === true ? 'visible' :'hidden'}}
             ref={aboutImg}
             className=""
             src={about}
-            alt="about image"
+            alt="about"
           />
         </span>
         <div className="container">
