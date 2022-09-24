@@ -1,6 +1,31 @@
-import React from 'react';
+import React,{useEffect,useRef} from 'react';
 import overlay from './images/overlay.png'
-const Advance = () => {
+
+const Advantage = () => {
+  
+const adventageText = useRef('');
+
+  useEffect(()=>{
+document.addEventListener('scroll',textAnimation)
+})
+const textFrame = [
+    { transform: 'translateY(20px)' },
+    { transform: 'translateY(15px)' },
+    {transform:'translateY(10px)'},
+    { transform: 'translateY(0)' }
+    ]
+const textAnimation=  () =>{ 
+   
+    if(window.scrollY >= 2130){
+
+     adventageText.current.animate(textFrame,{
+       duration :1150
+   
+     })
+    document.removeEventListener('scroll',textAnimation)
+     
+    }
+   }
    return (
   <section className="advgSec">
         <span
@@ -41,7 +66,7 @@ const Advance = () => {
                 <br />
                 Advantages.
               </h2>
-              <ul className="advgPoint">
+              <ul ref={adventageText} className="advgPoint">
                 <li
                   style={{
                     transform: "translate3d(0px, 0px, 0px)",
@@ -101,4 +126,4 @@ const Advance = () => {
       </section>
      )
 }
-export default Advance
+export default Advantage

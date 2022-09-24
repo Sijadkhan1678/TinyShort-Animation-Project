@@ -4,7 +4,7 @@ import Navbar from './components/layout/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
 import Explore from './components/Explore'
-import Advance from './components/Advance'
+import Advantage from './components/Advantage'
 import Zapareblue from './components/Zapareblue'
 import Enquiry from './components/Enquiry'
 import Footer from './components/Footer'
@@ -17,7 +17,7 @@ const App = () => {
       <Hero />
       <About />
       <Explore />
-      <Advance />
+      <Advantage />
       <Zapareblue />
       <Enquiry />
       <Footer />

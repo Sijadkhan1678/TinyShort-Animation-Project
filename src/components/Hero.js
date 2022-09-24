@@ -1,7 +1,7 @@
 import React,{useRef,useEffect} from 'react'
 
 const Hero = () => {
-  console.log(window.scrollY)
+  
   const banner = useRef('')
   const text1  = useRef('')
   const text2  = useRef('')

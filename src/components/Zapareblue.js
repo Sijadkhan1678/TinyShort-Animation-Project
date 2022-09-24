@@ -1,7 +1,31 @@
-import React from 'react'
+import React,{useEffect,useRef} from 'react'
 import ztext from './images/z-text.svg'
 
 const Zapareblue = () => {
+  
+const blueText = useRef('');
+
+  useEffect(()=>{
+document.addEventListener('scroll',textAnimation)
+})
+const textFrame = [
+    { transform: 'translateY(20px)' },
+    { transform: 'translateY(15px)' },
+    {transform:'translateY(10px)'},
+    { transform: 'translateY(0)' }
+    ]
+const textAnimation=  () =>{ 
+   
+    if(window.scrollY >= 2550){
+
+     blueText.current.animate(textFrame,{
+       duration :1150
+   
+     })
+    document.removeEventListener('scroll',textAnimation)
+     
+    }
+   }
   
    return (
    <section className="zBlueSec">
@@ -14,7 +38,7 @@ const Zapareblue = () => {
             <br />
             dynamic and managed business solutions
           </h2>
-          <div className="row blurow">
+          <div ref={blueText} className="row blurow">
             <div
               className="col-md-4 blubox"
               style={{ transform: "translate3d(0px, 0px, 0px)", opacity: 1 }}

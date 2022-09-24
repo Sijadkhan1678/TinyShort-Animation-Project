@@ -1,6 +1,76 @@
-import React from 'react';
+import React,{useEffect,useRef,useState} from 'react';
 
 const Enquiry = () => {
+  
+const [isvisible,setVisible]  = useState(false)
+const enqrImg = useRef('');
+const headingText = useRef('');
+const contactText = useRef('');
+const button = useRef('') 
+
+  useEffect( () =>{
+    document.addEventListener('scroll',enqrImgAnimation)
+    document.addEventListener('scroll',headingAnimation)
+    document.addEventListener('scroll',contactTextAnimation)
+  
+  })
+ const imgFrame =  [{
+        visibility:'hidden',
+        transform: 'translateX(400px)'},
+   {
+     transform: 'translateY(-50px)'
+    },
+    {
+      transform:'translateY(0)',
+      transform: 'translateX(0)' ,
+      
+    }
+    ]
+const textFrames = [
+      {opacity: 0},
+      {opacity:0},
+      {opacity:0},
+      {opacity:0.2},
+      {opacity:0.4},
+      {opacity:0.6},
+      {opacity:0.8},
+      { opacity:1}
+      ]
+const enqrImgAnimation = () => {
+  
+  if(window.scrollY >= 3253){
+   enqrImg.current.animate(imgFrame,
+    {
+    duration:2500,
+    
+    })
+    setVisible(true)
+    document.removeEventListener('scroll',enqrImgAnimation)
+  }
+  }
+ const headingAnimation = () =>{
+if(window.scrollY >= 3350){
+   headingText.current.animate(textFrames,{
+      duration: 1500,
+      
+    })
+    document.removeEventListener('scroll',headingAnimation)
+  }
+ }
+ const contactTextAnimation = () =>{
+if(window.scrollY >= 3490){
+    contactText.current.animate(textFrames,{
+      duration:1900,
+    
+    })
+    
+    button.current.animate(textFrames,{
+      duration:2500,
+      
+    })
+    document.removeEventListener('scroll',contactTextAnimation)
+    }
+ }
   return (
   <section className="enqrSec">
         <div className="container">
@@ -15,13 +85,14 @@ const Enquiry = () => {
                   className=""
                   style={{ width: "100%", height: "100%" }}
                 >
-                  <svg
+                  <svg ref={enqrImg}
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 840 840"
                     width={840}
                     height={840}
                     preserveAspectRatio="xMidYMid meet"
                     style={{
+                      visibility: isvisible ? 'visible' :'hidden',
                       width: "100%",
                       height: "100%",
                       transform: "translate3d(0px, 0px, 0px)"
@@ -4354,7 +4425,7 @@ const Enquiry = () => {
                 className="shape rotate icon-dgn-squir"
                 style={{ transform: "translateY(-150.259px)" }}
               />
-              <h2
+              <h2 ref={headingText}
                 className="h1text"
                 style={{ transform: "translate3d(0px, 0px, 0px)", opacity: 1 }}
               >
@@ -4363,12 +4434,14 @@ const Enquiry = () => {
                 about your requirements
               </h2>
               <p
+                 ref={contactText}
                 style={{ transform: "translate3d(0px, 0px, 0px)", opacity: 1 }}
               >
                 Contact us and know more about how our experts can help your
                 business grow.
               </p>
               <div
+               ref={button}
                 className="a"
                 style={{ transform: "translate3d(0px, 0px, 0px)", opacity: 1 }}
               >
